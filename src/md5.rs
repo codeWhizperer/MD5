@@ -21,20 +21,20 @@ pub fn bit_padding(message: &str) -> Vec<u8> {
 }
 
 // Manual Extraction Using Bitwise Operations:
-pub fn split_u64_to_u8_array(value: u64) -> [u8; 8] {
-    [
-        value as u8,
-        (value >> 8) as u8,
-        (value >> 16) as u8,
-        (value >> 24) as u8,
-        (value >> 32) as u8,
-        (value >> 40) as u8,
-        (value >> 48) as u8,
-        (value >> 56) as u8,
-    ]
-}
+// pub fn split_u64_to_u8_array(value: u64) -> [u8; 8] {
+//     [
+//         value as u8,
+//         (value >> 8) as u8,
+//         (value >> 16) as u8,
+//         (value >> 24) as u8,
+//         (value >> 32) as u8,
+//         (value >> 40) as u8,
+//         (value >> 48) as u8,
+//         (value >> 56) as u8,
+//     ]
+// }
 
-pub fn split_u64_to_u8_array2(value: u64) -> [u8; 8] {
+pub fn split_u64_to_u8_array(value: u64) -> [u8; 8] {
     value.to_le_bytes() // Little-endian (low-order byte first)
 }
 
